@@ -2,7 +2,8 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>بطاقة معتمر</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ✅ يخلي الصفحة متجاوبة -->
+  <title>بطاقة تعريف معتمر</title>
   <style>
     body {
       font-family: "Tajawal", sans-serif;
@@ -11,45 +12,115 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh; /* ✅ بدل height لتفادي القص */
       margin: 0;
+      padding: 15px; /* ✅ علشان تبعد الكارت عن أطراف الشاشة */
     }
+
     .card {
-      background: #ffffff;
-      border-radius: 20px;
-      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+      background: #fff;
+      border-radius: 25px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      width: 100%; /* ✅ عرض مرن */
+      max-width: 400px; /* ✅ الحد الأقصى لسطح المكتب */
       text-align: center;
-      padding: 30px;
-      width: 360px;
+      padding: 20px;
       transition: 0.3s;
-      border-top: 6px solid #1d72b8;
     }
-    .person-img {
-      width: 280px;
-      height: 280px;
-      border-radius: 15px;
+
+    .card:hover {
+      box-shadow: 0 8px 35px rgba(29, 114, 184, 0.25);
+      transform: translateY(-3px);
+    }
+
+    .profile-img {
+      width: 100%;
+      aspect-ratio: 1 / 1; /* ✅ تجعل الصورة مربعة في كل الأجهزة */
+      border-radius: 18px;
       object-fit: cover;
       border: 3px solid #1d72b8;
       margin-bottom: 15px;
     }
-    h2 { color: #1d72b8; margin-bottom: 10px; }
-    .info p { text-align: right; margin: 8px 0; font-size: 16px; color: #555; }
-    .info strong { color: #1d72b8; }
-    footer { margin-top: 20px; font-size: 13px; color: #888; }
+
+    h2 {
+      color: #1d72b8;
+      margin: 8px 0 3px;
+      font-size: 22px;
+    }
+
+    p {
+      margin: 5px 0;
+      color: #555;
+      font-size: 15px;
+    }
+
+    .social-btn {
+      display: block;
+      background: #f3f6f9;
+      color: #1d72b8;
+      border: 1px solid #d7dee7;
+      border-radius: 12px;
+      padding: 12px 0;
+      margin: 8px 0;
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .social-btn:hover {
+      background: #1d72b8;
+      color: #fff;
+      transform: scale(1.03);
+    }
+
+    .call-btn {
+      background: #1d72b8;
+      color: #fff;
+      border-radius: 12px;
+      padding: 13px 0;
+      margin-top: 15px;
+      font-size: 15px;
+      text-decoration: none;
+      display: block;
+      transition: 0.3s;
+      box-shadow: 0 0 12px rgba(29, 114, 184, 0.4);
+    }
+
+    .call-btn:hover {
+      background: #155a8f;
+      box-shadow: 0 0 18px rgba(29, 114, 184, 0.6);
+    }
+
+    footer {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #777;
+    }
   </style>
 </head>
 <body>
+
   <div class="card">
-    <img src="person.jpg" alt="صورة المعتمر" class="person-img">
-    <h2>اسم المعتمر</h2>
-    <div class="info">
-      <p><strong>محل الإقامة:</strong> —</p>
-      <p><strong>رقم الجواز:</strong> —</p>
-      <p><strong>رقم الجوال:</strong> —</p>
-      <p><strong>المشرف:</strong> —</p>
-      <p><strong>الشركة:</strong> —</p>
-    </div>
+    <img src="logo.jpeg" alt="صورة المعتمر" class="profile-img">
+    <h2>   شركة الفرسان ترافيل للرحلات
+
+    </h2>
+
+    <p>   توفيق محمد أحمد علي
+</p>
+    <p><em>“رحلة آمنة وميسّرة”</em></p>
+
+    <a href="info.html" class="social-btn"> تعريف كامل عن المعتمر وعن الشركة والمشرف</a>
+    <a href="#" class="social-btn"> فندق الاقامة في مكة📍</a>
+    <a href="#" class="social-btn"> فندق الاقامة في المدينة📍</a>
+    <a href="https://www.facebook.com/share/14SReskPVPM/" class="social-btn"> صفحة الشركة على فيسبوك</a>
+    <a href="https://www.facebook.com/share/14SReskPVPM/" class="social-btn"> موقع الشركة على الخريطة</a>
+
+    <a href="tel:01023655954" class="call-btn"> اتصل الآن بمشرف الرحلة📞</a>
+
     <footer>© جميع الحقوق محفوظة لمكتب العمرة</footer>
   </div>
+
 </body>
 </html>
