@@ -2,36 +2,89 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>تفاصيل الرحلة</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ✅ يجعل الصفحة متوافقة مع الجوال -->
+  <title>بطاقة معتمر</title>
   <style>
     body {
       font-family: "Tajawal", sans-serif;
-      background: #f8fafc;
+      background: linear-gradient(135deg, #f0f4f8, #e6ebf0);
       color: #333;
-      padding: 20px;
-      direction: rtl;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
     }
-    h2 { color: #1d72b8; text-align: center; }
-    .box {
-      background: white;
+
+    .card {
+      background: #ffffff;
+      border-radius: 20px;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 30px;
+      width: 360px;
+      max-width: 90%; /* ✅ يجعلها تنكمش تلقائياً على الشاشات الصغيرة */
+      transition: 0.3s;
+      border-top: 6px solid #1d72b8;
+    }
+
+    .card:hover {
+      box-shadow: 0 6px 35px rgba(29, 114, 184, 0.25);
+      transform: translateY(-3px);
+    }
+
+    .person-img {
+      width: 100%; /* ✅ تتناسب تلقائياً مع العرض */
+      max-width: 280px;
+      height: auto;
       border-radius: 15px;
-      padding: 20px;
-      margin: 20px auto;
-      max-width: 500px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      object-fit: cover;
+      border: 3px solid #1d72b8;
+      margin-bottom: 15px;
     }
-    p { font-size: 16px; margin: 10px 0; }
-    strong { color: #1d72b8; }
+
+    h2 {
+      color: #1d72b8;
+      margin-bottom: 10px;
+    }
+
+    .info p {
+      text-align: right;
+      direction: rtl;
+      margin: 8px 0;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .info strong {
+      color: #1d72b8;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 13px;
+      color: #888;
+    }
   </style>
 </head>
 <body>
-  <h2>تفاصيل رحلة المعتمر</h2>
-  <div class="box">
-    <p><strong>اسم الفندق:</strong> —</p>
-    <p><strong>رقم الغرفة:</strong> —</p>
-    <p><strong>موعد الرحلة:</strong> —</p>
-    <p><strong>المطار:</strong> —</p>
-    <p><strong>المشرف:</strong> —</p>
+
+  <div class="card">
+    <img src="hitham.jpeg" alt="صورة المعتمر" class="person-img">
+    <h2>توفيق محمد أحمد علي</h2>
+    <div class="info">
+      <p><strong>محل إقامة المعتمر:</strong> مصر / محافظة المنيا / مدينة ملوي</p>
+      <p><strong>رقم الجواز:</strong> A1234567</p>
+      <p><strong>رقم جوال مصري يخص المعتمر:</strong> 01023655954</p>
+      <p><strong>رقم جوال مصري يخص المعتمر:</strong> 01023655954</p>
+      <p><strong>رقم جوال سعودي يخص المشرف:</strong> 0565958484</p>
+      <p><strong>رقم جوال مصري يخص الشركة:</strong> 01065545494</p>
+      <p><strong>مكان إقامة الشركة:</strong> مصر / محافظة المنيا / مدينة ملوي</p>
+      <p><strong>مشرف الرحلة:</strong> عمرو جمعة</p>
+      <p><strong>اسم الشركة:</strong> الفرسان ترافيل للرحلات</p>
+    </div>
+    <footer>© جميع الحقوق محفوظة لمكتب العمرة</footer>
   </div>
+
 </body>
 </html>
